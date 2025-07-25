@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRcraft - Scan, Create, Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="QRcraft.png" type="image/jpeg">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="QRcraft.png" alt="QRcraft Logo" class="logo-img">
+            <h1>QRcraft</h1>
+        </div>
+        <div class="theme-switcher">
+            <label for="theme-toggle">Dark Mode</label>
+            <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
+            <label for="theme-toggle" class="toggle-label"></label>
+        </div>
+    </header>
+
+    <main class="main-grid">
+        <section class="controls-container">
+            <h2>Customize Your QR Code</h2>
+
+            <div class="form-group">
+                <label for="text-input">Enter Text or URL</label>
+                <textarea id="text-input" placeholder="e.g., https://www.google.com"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="size-slider">Size: <span id="size-value">300</span>px</label>
+                <input type="range" id="size-slider" min="100" max="1000" value="300">
+            </div>
+
+            <div class="form-group color-pickers">
+                <div>
+                    <label for="color-dot">Dot Color</label>
+                    <input type="color" id="color-dot" value="#000000">
+                </div>
+                <div>
+                    <label for="color-bg">Background Color</label>
+                    <input type="color" id="color-bg" value="#ffffff">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="logo-upload">Add a Logo (Optional)</label>
+                <input type="file" id="logo-upload" accept="image/png, image/jpeg, image/svg+xml">
+            </div>
+
+            <div class="button-group">
+                <button id="generate-btn" class="primary">Generate QR</button>
+                <button id="download-btn">Download QR</button>
+                <button id="reset-btn" class="danger-btn">Reset</button>
+            </div>
+        </section>
+
+        <section class="output-container">
+            <div class="qr-code-preview">
+                <h3>Preview</h3>
+                <div id="qr-canvas"></div>
+            </div>
+
+            <div class="history-section">
+                <h3>History</h3>
+                <button id="clear-history-btn" class="danger-btn small">Clear History</button>
+                <div id="history-list">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
