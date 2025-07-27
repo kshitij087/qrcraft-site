@@ -1,7 +1,5 @@
 # QRcraft - Dynamic QR Code Generator
 
-![QRcraft Logo](https://i.imgur.com/f7jD9v1.jpg)
-
 QRcraft is a modern, user-friendly web application for creating, customizing, and managing QR codes. It provides a seamless experience for generating everything from simple text-based QR codes to branded ones with custom logos and colors.
 
 **Live Demo:** [**qrcraft-site.vercel.app**](https://qrcraft-site.vercel.app/)
